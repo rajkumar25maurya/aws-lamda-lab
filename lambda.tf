@@ -47,7 +47,7 @@ resource "aws_iam_role_policy_attachment" "lambda_logs" {
 }
 
 resource "aws_lambda_function" "lambda_tf" {
-    filename    =   "lambda.zio"
+    filename    =   "lambda.zip"
     function_name = "lambda_handler"
     role = "${aws_iam_role.iam_for_lambda.arn}"
     handler         = "lambda.lambda_handler"
