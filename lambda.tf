@@ -43,7 +43,7 @@ EOF
 resource "aws_iam_role_policy_attachment" "lambda_logs" {
   role       = "${aws_iam_role.iam_for_lambda.name}"
   policy_arn = "${aws_iam_policy.lambda_logging.arn}"
-  depends_on = ["aws_iam_role.iam_for_lamda","aws_iam_policy.lambda_logging"]
+  depends_on = ["aws_iam_role.iam_for_lambda","aws_iam_policy.lambda_logging"]
 }
 
 resource "aws_lambda_function" "lambda_tf" {
